@@ -8,6 +8,7 @@ gem 'rails', '3.1.3'
 # gems for gmail oauth
 gem 'json'
 gem 'oauth'
+gem 'haml'
 
 gem 'sqlite3'
 

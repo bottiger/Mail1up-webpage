@@ -1,0 +1,23 @@
+%h1 Your E-mail is now being backed up.
+.user-data
+  %p
+    %strong E-mail:
+    = @email || ":("
+  %p 
+    %strong Token: 
+    = @access_token.token
+  %p 
+    %strong Secret: 
+    = @access_token.secret
+
+%h1 Security
+.security
+  We are encrypting all data on out servers which should make it secure against evil hackers. However, as long as you don't take any responability for your e-mails security there is only so much we can do. We suggest that you generate a public-private kay pair, and give us your public key. This will allow us to encrypt your data so 
+  %strong only you
+  Can decrypt it. This of course also means that if you loose you private key there is no way to recover from your backup.
+
+%h1 Price
+.price
+  Since backup is such an critical topic We would like to offer this service completly free for everyone. However, harddrives cost money and we simply cannot host the all the worlds e-mails for free. Therefore we carge a small fee of $2 pr month for storage of your data. However, if you would rather perfer to store the data yourself that is totally possible. We support storing to Amazons S3 service which is extremly cheap. Just sign up on <a href="#">aws.amazon.com</a> and add your keys to a dedicated bucket below.
+
+%h1 Statistics

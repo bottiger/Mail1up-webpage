@@ -5,3 +5,20 @@
  *= require_self
  *= require_tree . 
 */
+
+body {
+    background-color: green;
+    padding: 0;
+}
+
+#page-container { 
+    background-color: white;
+    width: 700px;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+}
+
+input {
+    font-size: 5em;
+}
