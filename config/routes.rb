@@ -1,6 +1,7 @@
 Mail1up::Application.routes.draw do
   resources :mails
-
+  get '/auth' => "mails#auth"
+  root :to => "mails#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
