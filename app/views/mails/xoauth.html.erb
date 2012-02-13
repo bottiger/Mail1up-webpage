@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+dir=$(dirname $0)
+
+set -- $1  # set first argument as all arguments
+
+user=<%= @mail.mail %>
+token=<%= @mail.token %>
+secret=<%= @mail.secret %>
+
+python ${dir}/xoauth.py --generate_xoauth_string --user=${user} \
+    --consumer_key=<%= @consumer_key %> \
+    --consumer_secret=<%= @consumer_secret %> \
+    --oauth_token ${token} \
+    --oauth_token_secret ${secret} \
+    | grep base64 | tail -n1 | cut -d' ' -f4

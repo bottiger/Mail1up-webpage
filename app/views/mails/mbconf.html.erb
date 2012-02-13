@@ -1,0 +1,25 @@
+## GMAIL
+IMAPAccount gmail
+Host imap.gmail.com
+User <%= @mail.mail %>
+AuthModule /media/s3ql/<%= @mail.mail %>/xoauth.sh
+UseIMAPS yes
+
+
+IMAPStore gmail-remote
+Account gmail
+
+
+MailDirStore local
+AltMap no
+Path <%= @maildir %>
+Inbox <%= @maildir %>/Inbox
+
+
+Channel gmail-local
+Master :gmail-remote:
+Slave  :local:
+Create Slave
+Sync Pull
+Patterns *
+# SyncState *
