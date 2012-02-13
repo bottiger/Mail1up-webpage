@@ -13,3 +13,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+myrsacert.pem
+myrsakey.pem
