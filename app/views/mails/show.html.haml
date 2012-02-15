@@ -1,4 +1,14 @@
 %h1 Your E-mail is now being backed up.
+
+%p 
+  So now all you do is wait. We have currently backup up 
+  %strong= @backup_size
+  %strong Mb 
+  of your e-mails, but we are not done yet. We will send you an e-mail as soon as the initial backup is complete.
+
+%p
+  Everything is encrypted so nobody (not even us) can access you data. If you ahve any questions please e-mail bottiger@gmail.com og zerrez@gmail.com
+
 .user-data
   %p
     %strong E-mail:
@@ -10,14 +20,3 @@
     %strong Secret: 
     = @access_token.secret
 
-%h1 Security
-.security
-  We are encrypting all data on our servers which should make it secure. However, as long as you don't take any responability for your e-mails security there is only so much we can do. We suggest that you generate a public-private kay pair, and give us your public key. This will allow us to encrypt your data so 
-  %strong only you
-  can decrypt it. This of course also means that if you loose you private key there is no way to recover from your backup.
-
-%h1 Price
-.price
-  Since backup is such an critical topic We would like to offer this service completly free for everyone. However, harddrives cost money and we simply cannot host the all the worlds e-mails for free. Therefore we carge a small fee of $2 pr month for storage of your data. However, if you would rather perfer to store the data yourself that is totally possible. We support storing to Amazons S3 service which is extremly cheap. Just sign up on <a href="#">aws.amazon.com</a> and add your keys to a dedicated bucket below.
-
-%h1 Statistics
